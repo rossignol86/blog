@@ -45,9 +45,9 @@ $article = $stmt->fetch(PDO::FETCH_ASSOC);
     
     <div class="header">
         <h1>Aquarium d'Amazonie</h1>
-        <form class="form" action="index.php" method="GET">
+        <form class="form" action="categorie.php" method="GET">
             <input type="hidden" name="id" value="1">
-            <button class="bouton-accueil" type="submit">Accueil</button>
+            <button class="bouton-accueil" type="submit">Catégorie</button>
         </form>
     </div>
 

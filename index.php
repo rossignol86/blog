@@ -3,26 +3,24 @@ require_once "bdd/bdd.php";
 
 $requete = 'SELECT DISTINCT categories FROM articles'; // Requête pour récupérer les catégories distinctes
 $categories = $bdd->query($requete); // Réalisation de la requête
-
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styleindex.css">
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon aquarium</title>
 </head>
 <body>
     <div class="header">
-        <h1> Aquarium d'Amazonie</h1>
-        <button class="bouton-admin"><a href="admin/adminblog.php">Admin</a></button>
+        <h1>Aquarium d'Amazonie</h1>
     </div>
 
-    <div>
-        <legend>Choisir une catégorie</legend>
+    <div class="form-container">
+        <h2>Choisissez la catégorie</h2>
         <form method="get" action="categorie.php">
             <select name="categorie">
                 <?php foreach ($categories as $categorie): ?>
@@ -31,6 +29,16 @@ $categories = $bdd->query($requete); // Réalisation de la requête
             </select>
             <button type="submit">Valider</button>
         </form>
+    </div>
+
+    <div class="cards">
+        <?php foreach ($categories as $categorie): ?>
+        <div class="card">
+            <img src="images/<?= ($categorie['categories']) ?>.jpg" alt="<?= $categorie['categories'] ?>">
+            <h3><?= $categorie['categories'] ?></h3>
+            <p>Description de la catégorie <?= $categorie['categories'] ?>.</p>
+        </div>
+        <?php endforeach; ?>
     </div>
 </body>
 </html>

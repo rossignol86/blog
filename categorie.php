@@ -21,15 +21,20 @@ if (isset($_GET['categorie'])) {
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles de la catégorie <?= htmlspecialchars($categorie) ?></title>
+    <title>Articles de la catégorie <?= ($categorie) ?></title>
 </head>
 <body>
     <div class="header">
         <h1>Articles de la catégorie : <?= ($categorie) ?></h1>
-        <button class="bouton-admin"><a href="admin/adminblog.php">Admin</a></button>
+        <div class="boutons">
+            <button class="bouton"><a href="index.php">Index</a></button>
+            <button class="bouton"><a href="admin/adminblog.php">Admin</a></button>
+        </div>
     </div>
 
     <div class="cards-container">
+
+
         <?php foreach ($articles as $article): ?>
             <div class="card">
                 <h2><?= ($article['titre']) ?></h2>
