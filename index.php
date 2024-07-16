@@ -1,21 +1,8 @@
 <?php
-
 require_once "bdd/bdd.php";
 
-$requete='SELECT * FROM articles'; // écriture de la requête
-$reponses=$bdd->query($requete); // réalisation de la requête
-
-// Initialiser un tableau pour stocker les articles par catégorie
-$articles_par_categorie = [];
-
-// Parcourir les résultats de la requête et les classer par catégorie
-foreach ($reponses as $reponse) {
-    $categorie = $reponse['categories'];
-    if (!isset($articles_par_categorie[$categorie])) {
-        $articles_par_categorie[$categorie] = [];
-    }
-    $articles_par_categorie[$categorie][] = $reponse;
-}
+$requete = 'SELECT DISTINCT categories FROM articles'; // Requête pour récupérer les catégories distinctes
+$categories = $bdd->query($requete); // Réalisation de la requête
 
 ?>
 
@@ -34,25 +21,16 @@ foreach ($reponses as $reponse) {
         <button class="bouton-admin"><a href="admin/adminblog.php">Admin</a></button>
     </div>
 
-    <div class="content">
-        <?php foreach ($articles_par_categorie as $categorie => $articles): ?>
-            <div class="categorie-section">
-                <h2><?= ($categorie) ?></h2>
-                <div class="cards-container">
-                    <?php foreach ($articles as $article): ?>
-                        <div class="card">
-                            <h3><?= ($article['titre']) ?></h3>
-                            <div class="card-image">
-                                <img src="<?= ($article['photo']) ?>" alt="Project Image">
-                            </div>
-                            <button class="bouton-details">
-                                <a href="article.php?id=<?=($article['id']) ?>">En savoir +</a>
-                            </button>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        <?php endforeach; ?>
+    <div>
+        <legend>Choisir une catégorie</legend>
+        <form method="get" action="categorie.php">
+            <select name="categorie">
+                <?php foreach ($categories as $categorie): ?>
+                    <option value="<?= $categorie['categories'] ?>"><?= $categorie['categories'] ?></option>
+                <?php endforeach; ?>
+            </select>
+            <button type="submit">Valider</button>
+        </form>
     </div>
 </body>
 </html>

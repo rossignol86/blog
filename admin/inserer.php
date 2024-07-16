@@ -28,8 +28,10 @@ $reponses=$bdd->query($requete); // réalisation de la requête
 
     <hr>
 
-
-    <form action="articleinsert.php" method="post">
+            <form action="articleinsert.php" method="post">
+                <label for="categories">Catégories :</label>
+                <input type="text" id="categories" name="categories">
+                <hr>
                 <label for="titre">Titre :</label>
                 <input type="text" id="titre" name="titre">
                 <hr>
@@ -41,5 +43,6 @@ $reponses=$bdd->query($requete); // réalisation de la requête
                 <hr>
                 <input type="submit" value="Envoyer">
             </form>
+            
 </body>
 </html>
