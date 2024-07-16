@@ -5,6 +5,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+h2 {
+    margin: 0 0 10px 0;
+}
 .header {
     background-color: #008cba;
     color: white;
@@ -25,7 +28,7 @@ body {
 }
 .form-container {
     text-align: center;
-    margin: 20px 0;
+    margin: 50px 0;
 }
 .form-container form {
     display: inline-block;

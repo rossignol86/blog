@@ -20,8 +20,8 @@ $categories = $bdd->query($requete); // Réalisation de la requête
     </div>
 
     <div class="form-container">
-        <h2>Choisissez la catégorie</h2>
         <form method="get" action="categorie.php">
+            <h2>Choisissez la catégorie</h2>
             <select name="categorie">
                 <?php foreach ($categories as $categorie): ?>
                     <option value="<?= $categorie['categories'] ?>"><?= $categorie['categories'] ?></option>
