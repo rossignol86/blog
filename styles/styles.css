@@ -15,7 +15,8 @@ h2 {
     border-radius: 8px;
 }
 
-.category-section h2 {
+.categorie-section h2 {
+    width: 50% ;
     font-size: 24px;
     color: #ffffff;
     text-align: center;
@@ -24,6 +25,7 @@ h2 {
     padding: 10px;
     background-color: #f6b233;
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 .header {
@@ -31,6 +33,7 @@ h2 {
     color: white;
     padding: 20px;
     text-align: center;
+    margin: 0px 0px 20px 0px ;
 }
 
 .header h1 {

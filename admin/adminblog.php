@@ -29,6 +29,7 @@ $reponses=$bdd->query($requete); // réalisation de la requête
 
     <?php foreach ($reponses as $reponse): ?>
         <section>
+            <h3><?= $reponse['categories'] ?></h2>
             <h2><?= $reponse['titre'] ?></h2>
             <p><?= $reponse['texte'] ?></p>
         </section>
