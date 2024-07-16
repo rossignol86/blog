@@ -42,6 +42,7 @@ $article = $stmt->fetch(PDO::FETCH_ASSOC);
     <title>Mon aquarium</title>
 </head>
 <body>
+    
     <div class="header">
         <h1>Aquarium d'Amazonie</h1>
         <form class="form" action="index.php" method="GET">
@@ -59,5 +60,6 @@ $article = $stmt->fetch(PDO::FETCH_ASSOC);
             </div>
         </div>
     </div>
+
 </body>
 </html>
