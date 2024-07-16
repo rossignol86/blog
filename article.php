@@ -6,12 +6,31 @@ require_once "bdd/bdd.php";
 $id = $_GET['id'];
 
 // Préparer et exécuter la requête SQL
+// La requête SQL pour sélectionner toutes les colonnes de la table "articles"
+// où l'ID est égal à une valeur spécifique (indiquée par le paramètre nommé ":id").
 $sql = "SELECT * FROM articles WHERE ID = :id";
+
+// Prépare la requête SQL pour exécution par la base de données, en utilisant l'objet PDO (ici représenté par "$bdd").
+// La préparation de la requête permet de protéger contre les injections SQL en utilisant des paramètres.
 $stmt = $bdd->prepare($sql);
+
+// Lie la valeur de la variable PHP "$id" au paramètre nommé ":id" dans la requête SQL préparée.
+// La méthode "bindValue" lie la valeur directement au paramètre,
+// ici on suppose que "$id" contient l'identifiant de l'article que vous voulez sélectionner.
 $stmt->bindValue(":id", $id);
+
+// Exécute la requête préparée avec les paramètres liés.
 $stmt->execute();
+
+// Récupère le résultat de la requête sous forme de tableau associatif (clé-valeur).
+// "PDO::FETCH_ASSOC" indique que les résultats doivent être retournés sous forme de tableau associatif,
+// où les clés sont les noms des colonnes de la table.
 $article = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
+
+
+
+
 
 <!DOCTYPE html>
 <html lang="fr">
