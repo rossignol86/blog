@@ -46,13 +46,20 @@ if (isset($_GET['id'])) {
     <form action="articlemodifier.php" method="post">
         <input type="hidden" name="id" value="<?php echo ($_GET['id']); ?>" />
         <div>
+            <label for="categories">Catégories :</label>
+            <input type="text" id="categories" name="categories" value="<?php echo ($article['categories']); ?>">
+        </div>
+        <hr>
+        <div>
             <label for="titre">Titre :</label>
             <input type="text" id="titre" name="titre" value="<?php echo ($article['titre']); ?>">
         </div>
+        <hr>
         <div>
             <label for="texte">Texte :</label>
             <textarea id="text" name="texte"><?php echo ($article['texte']); ?></textarea>
         </div>
+        <hr>
         <div>
             <label for="photo">Photo :</label>
             <input type="text" id="photo" name="photo">
