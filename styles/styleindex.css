@@ -1,21 +1,28 @@
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Rajdhani", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background-image: url('../images/fond2.jpg');
+    background-size: cover;
+    background-position: justify;
+    background-repeat: no-repeat;
 }
 h2 {
     margin: 0 0 10px 0;
 }
 .header {
-    background-color: #008cba;
+    background-color: #5b3a1f;
     color: white;
     padding: 15px;
     text-align: center;
 }
 .header h1 {
     margin: 0;
+    padding: 10px;
+    font-size: 60px;
+    font-weight: 500;
 }
 .bouton-admin {
     position: absolute;
@@ -28,7 +35,7 @@ h2 {
 }
 .form-container {
     text-align: center;
-    margin: 50px 0;
+    margin: 100px 0;
 }
 .form-container form {
     display: inline-block;

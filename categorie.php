@@ -19,13 +19,18 @@ if (isset($_GET['categorie'])) {
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles de la catégorie <?= ($categorie) ?></title>
 </head>
 <body>
     <div class="header">
-        <h1>Articles de la catégorie : <?= ($categorie) ?></h1>
+        <h1>Articles de la catégorie : <strong><?= ($categorie) ?></strong></h1>
         <div class="boutons">
             <button class="bouton"><a href="index.php">Index</a></button>
             <button class="bouton"><a href="admin/adminblog.php">Admin</a></button>

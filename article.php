@@ -26,6 +26,7 @@ $stmt->execute();
 // "PDO::FETCH_ASSOC" indique que les résultats doivent être retournés sous forme de tableau associatif,
 // où les clés sont les noms des colonnes de la table.
 $article = $stmt->fetch(PDO::FETCH_ASSOC);
+
 ?>
 
 
@@ -37,6 +38,11 @@ $article = $stmt->fetch(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/stylearticle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon aquarium</title>
@@ -44,15 +50,17 @@ $article = $stmt->fetch(PDO::FETCH_ASSOC);
 <body>
     
     <div class="header">
-        <h1>Aquarium d'Amazonie</h1>
-        <form class="form" action="index.php" method="GET">
-            <input type="hidden" name="id" value="1">
-            <button class="bouton-accueil" type="submit">Index</button>
-        </form>
+        <h1>Aquarium d'eau douce d'Amazonie</h1>
+        <div class="boutons">
+            <button class="bouton"><a href="index.php">Index</a></button>
+            <button class="bouton"><a href="categorie.php=<?= $categorie['categories'] ?>">Catégorie</a></button>
+            <button class="bouton"><a href="admin/adminblog.php">Admin</a></button>
+        </div>
     </div>
 
+
     <div class="article-card">
-        <h2><?= $article['titre'] ?></h2>
+        <h2> > <?= $article['titre'] ?></h2>
         <h3><?= $article['categories'] ?></h2>
         <div class="article-texte">
             <p><?= $article['texte'] ?></p>

@@ -10,13 +10,18 @@ $categories = $bdd->query($requete); // Réalisation de la requête
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/styleindex.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon aquarium</title>
 </head>
 <body>
     <div class="header">
-        <h1>Aquarium d'Amazonie</h1>
+        <h1>Aquarium d'eau douce d'Amazonie</h1>
     </div>
 
     <div class="form-container">
