@@ -63,10 +63,10 @@ $article = $stmt->fetch(PDO::FETCH_ASSOC);
         <h2> > <?= $article['titre'] ?></h2>
         <h3><?= $article['categories'] ?></h2>
         <div class="article-texte">
-            <p><?= $article['texte'] ?></p>
             <div class="article-image">
                 <img src="<?=($article['photo']) ?>" alt="Project Image">
             </div>
+            <p><?= $article['texte'] ?></p>
         </div>
     </div>
 

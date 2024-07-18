@@ -27,16 +27,17 @@ $categories = $bdd->query($requete); // Réalisation de la requête
     <div class="form-container">
         <form method="get" action="categorie.php">
             <h2>Choisissez la catégorie</h2>
-            <select name="categorie">
+            <select class="select_categorie" name="categorie">
                 <?php foreach ($categories as $categorie): ?>
-                    <option value="<?= $categorie['categories'] ?>"><?= $categorie['categories'] ?></option>
+                    <option value="<?= $categorie['categories'] ?>">
+                        <?= $categorie['categories'] ?></option>
                 <?php endforeach; ?>
             </select>
-            <button type="submit">Valider</button>
+            <button type="submit"><a>Valider</a></button>
         </form>
     </div>
 
-    <div class="cards">
+    <div class="card_categories">
         <?php foreach ($categories as $categorie): ?>
         <div class="card">
             <img src="images/<?= ($categorie['categories']) ?>.jpg" alt="<?= $categorie['categories'] ?>">
@@ -44,6 +45,19 @@ $categories = $bdd->query($requete); // Réalisation de la requête
             <p>Description de la catégorie <?= $categorie['categories'] ?>.</p>
         </div>
         <?php endforeach; ?>
+    </div>
+
+    <div class="card_aqua">
+        <div class="card2">
+            <h3>Reproduire le milieu naturel... tentant mais pas si facile !</h3>
+            <p>L'aquariophilie consiste à reproduire et maintenir en captivité des animaux aquatiques
+            en mettant en valeur l'aspect esthétique des animaux et du décor, ce qui la différencie
+            de l'aquaculture dont le but est la production agro-alimentaire. L'aquarium est alors utilisé
+            comme une vitrine ornementale sur un monde habité différent, il devient un centre d'attraction
+            qui remplace les photos, les tableaux ou la télévision.
+            L'aquariophilie est aussi une pratique naturaliste exploitant l'aquarium comme outil
+            d'observation et de pédagogie écologiques.</p>
+        </div>
     </div>
 </body>
 </html>
