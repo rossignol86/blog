@@ -1,0 +1,76 @@
+
+body {
+    font-family: "Rajdhani", sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f4; */
+    /* background-image: url('../images/fond/fond3.jpg');
+    background-size: cover;
+    background-position: justify;
+    background-repeat: no-repeat; */
+}
+h2 {
+    margin: 0 0 10px 0;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+a {
+    font-size: 16px;
+    font-weight: 600;
+}
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 60px;
+    font-weight: 500;
+}
+.bouton-admin {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.bouton-admin a {
+    color: white;
+    text-decoration: none;
+}
+
+.boutons {
+    display: flex;
+    gap: 20px; /* Espace entre les boutons */
+    margin: 10px 0px 0px 0px;
+}
+
+.bouton {
+    background-color: #91c61e; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Pas de soulignement */
+    display: inline-block; /* Affichage en ligne */
+    font-size: 16px; /* Taille de la police */
+    margin: 4px 2px; /* Marges */
+    cursor: pointer; /* Curseur de pointeur */
+    border-radius: 4px; /* Coins arrondis */
+}
+
+.bouton a {
+    color: white; /* Couleur du texte du lien */
+    text-decoration: none; /* Pas de soulignement */
+}
+
+.bouton:hover {
+    background-color: #225024;; /* Couleur de fond au survol */
+}

@@ -12,7 +12,7 @@
     <body>   
         <container>
             <div>
-                <h1>Me contacter</h1>
+                <h1>Formulaire de témoignages</h1>
 
             <!-- Formulaire de renseignement -->
                 <form action="contact.php" method="post">

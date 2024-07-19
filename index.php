@@ -21,7 +21,13 @@ $categories = $bdd->query($requete); // Réalisation de la requête
 </head>
 <body>
     <div class="header">
-        <h1>Comment réaliser un aquarium amazonien ?</h1>
+        <h1>Réaliser un aquarium amazonien</h1>
+
+        <div class="boutons">
+            <button class="bouton"><a href="admin/temoignages.php">Vos témoignages</a></button>
+            <button class="bouton"><a href="admin/contact.php">Contactez-moi</a></button>
+            <button class="bouton"><a href="admin/adminblog.php">Admin</a></button>
+        </div>
     </div>
 
     <div class="form-container">
