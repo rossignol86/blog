@@ -17,7 +17,7 @@ $categories = $bdd->query($requete); // Réalisation de la requête
 
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon aquarium</title>
+    <title>Réaliser un aquarium amazonien</title>
 </head>
 <body>
     <div class="header">

@@ -31,25 +31,25 @@
         </div>
 
 
-        <container>
-            <div>
+        <container class="cards-container">
+            <div class="card">
                 <h1>Contactez-moi</h1>
 
             <!-- Formulaire de renseignement -->
                 <form action="contact.php" method="post">
-                    <label for="nom">Nom :</label>
+                    <label for="nom"><a>Nom</a></label>
                     <input class="formulaire" type="text" id="nom" name="nom" required>
                     
-                    <label for="societe">Prénom :</label>
+                    <label for="societe"><a>Prénom</a></label>
                     <input class="formulaire" type="text" id="societe" name="societe">
                     
-                    <label for="email">Email :</label>
+                    <label for="email"><a>Email</a></label>
                     <input class="formulaire" type="email" id="email" name="email" required><br><br>
                     
-                    <label for="message">Message :</label>
+                    <label for="message"><a>Message</a></label>
                     <textarea  class="formulaire" id="message" name="message" required></textarea><br><br>
                     
-                    <input class="boutton" type="submit" value="Envoyer">
+                    <input class="bouton-envoyer" type="submit" value="Envoyer">
                 </form>
 
             </div>
