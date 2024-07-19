@@ -19,10 +19,14 @@
         
         <div class="header">
             <h1>Réaliser un aquarium amazonien</h1>
+
             <div class="boutons">
                 <button class="bouton"><a href="../index.php">Accueil</a></button>
-                <button class="bouton"><a href="">Vos témoignages</a></button>
+                <div class="boutonfixe">
+                    <button class="bouton2"><a>Vos témoignages</a></button>
+                </div>
                 <button class="bouton"><a href="contact.php">Contactez-moi</a></button>
+                <button class="bouton"><a href="adminblog.php">Admin</a></button>
             </div>
         </div>
 

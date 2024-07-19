@@ -8,9 +8,9 @@ if (isset($_GET['categorie'])) {
     $requete->execute(['categorie' => $categorie]); // Exécution de la requête
     $articles = $requete->fetchAll(); // Récupération des résultats
 } else {
-    // Redirection si aucune catégorie n'est sélectionnée
-    header('Location: index.php');
-    exit;
+    // Si j'ai selectionné "tous"
+    
+    // je recupere tous les articles
 }
 ?>
 

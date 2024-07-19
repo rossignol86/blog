@@ -11,6 +11,8 @@ if (isset($_GET['id'])) {
     $article = $requete_article->fetch();
 }
 
+ // rediriger si pas d'id
+
 ?>
 
 

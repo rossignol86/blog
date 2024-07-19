@@ -9,6 +9,11 @@ body {
     background-repeat: no-repeat;
 }
 
+a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
 .header {
     background-color: #4CAF50;
     color: white;
@@ -73,31 +78,6 @@ h3 {
 .bouton:hover {
     background-color: #225024;; /* Couleur de fond au survol */
 }
-
-/* .bouton-accueil {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.bouton-accueil:hover {
-    background-color: #555;
-    transform: scale(1.05);
-}
-
-.bouton-accueil:active {
-    background-color: #222;
-    transform: scale(1);
-} */
-
-
-
 
 
 .article-card {

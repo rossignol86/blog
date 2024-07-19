@@ -46,12 +46,12 @@ a {
     text-decoration: none;
 }
 
+/* boutons actifs */
 .boutons {
     display: flex;
     gap: 20px; /* Espace entre les boutons */
-    margin: 10px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
-
 .bouton {
     background-color: #91c61e; /* Couleur de fond */
     color: white; /* Couleur du texte */
@@ -65,12 +65,38 @@ a {
     cursor: pointer; /* Curseur de pointeur */
     border-radius: 4px; /* Coins arrondis */
 }
-
 .bouton a {
     color: white; /* Couleur du texte du lien */
     text-decoration: none; /* Pas de soulignement */
 }
-
 .bouton:hover {
     background-color: #225024;; /* Couleur de fond au survol */
+}
+.bouton:active {
+    background-color: #225024; /* Couleur de fond au survol */
+}
+
+
+/* bouton fixe */
+.boutonfixe {
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur de pointeur */
+}
+.bouton2 {
+    background-color: #225024; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Pas de soulignement */
+    display: inline-block; /* Affichage en ligne */
+    font-size: 16px; /* Taille de la police */
+    margin: 4px 2px; /* Marges */
+    cursor: pointer; /* Curseur de pointeur */
+    border-radius: 4px; /* Coins arrondis */
+}
+.bouton2 a {
+    color: white; /* Couleur du texte du lien */
+    text-decoration: none; /* Pas de soulignement */
 }

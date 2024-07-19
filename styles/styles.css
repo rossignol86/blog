@@ -20,6 +20,11 @@ h2 {
     border-radius: 8px;
 }
 
+a {
+    font-size: 16px;
+    font-weight: 800;
+}
+
 .categorie-section h2 {
     width: 50% ;
     /* font-size: 40px; */
