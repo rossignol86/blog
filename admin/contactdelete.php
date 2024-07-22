@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
 }
 
 // Redirection vers la page principale après la suppression
-header('Location:contactlist.php');
+header('Location:contactliste.php');
 exit;
 
 ?>

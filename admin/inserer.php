@@ -23,6 +23,7 @@ $reponses=$bdd->query($requete); // réalisation de la requête
             <li><a href="../index.php">Accueil</a></li>
             <li><a href="adminblog.php">Page Administration</a></li>
             <!-- <li><a href="modifier.php">Page Modifer Article</a></li> -->
+            <li><a href="contactliste.php">Liste des contacts</a></li>
         </ul>
     </nav>
 

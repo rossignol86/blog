@@ -27,7 +27,8 @@ $reponses=$bdd->query($requete); // réalisation de la requête
     </nav>
 
     <hr>
-
+    <h2>Liste des contacts</h2>
+    <hr>
     <?php foreach ($reponses as $reponse): ?>
         <section>
             <h3><?= $reponse['prenom'] ?> <?= $reponse['nom'] ?></h2>

@@ -11,11 +11,11 @@ $base_de_donnees = "aquarium";
 $mot_de_passe, $base_de_donnees);
 
 // Vérifier la connexion
-if (!$connexion) {
-    die("Échec de la connexion : " . mysqli_connect_error());
-} else {
-    echo "Connexion réussie à la base de données.";
-}
+// if (!$connexion) {
+//     die("Échec de la connexion : " . mysqli_connect_error());
+// } else {
+//     echo "Connexion réussie à la base de données.";
+// }
  
  
 // Vérification si le formulaire est soumis
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="boutons">
                 <button class="bouton"><a href="../index.php">Accueil</a></button>
-                <button class="bouton"><a href="temoignages.php">Vos témoignages</a></button>
+                <button class="bouton"><a href="../temoignages.php">Vos témoignages</a></button>
                 <div class="boutonfixe">
                     <button class="bouton2"><a>Contactez-moi</a></button>
                 </div>

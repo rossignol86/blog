@@ -33,7 +33,7 @@ if (isset($_GET['categorie'])) {
         <h1>Articles de la catégorie : <strong><?= ($categorie) ?></strong></h1>
         <div class="boutons">
             <button class="bouton"><a href="index.php">Accueil</a></button>
-                <button class="bouton"><a href="admin/temoignages.php">Vos témoignages</a></button>
+                <button class="bouton"><a href="temoignages.php">Vos témoignages</a></button>
                 <button class="bouton"><a href="admin/contact.php">Contactez-moi</a></button>
         </div>
     </div>

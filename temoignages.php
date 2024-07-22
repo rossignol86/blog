@@ -33,23 +33,10 @@ $categories = $bdd->query($requete); // Réalisation de la requête
         </div>
     </div>
 
-    <div class="form-container">
-        <form method="get" action="categorie.php">
-            <h2>Choisissez la catégorie</h2>
-            <select class="select_categorie" name="categorie">
-                <?php foreach ($categories as $categorie): ?>
-                    <option value="<?= $categorie['categories'] ?>">
-                        <?= $categorie['categories'] ?></option>
-                <?php endforeach; ?>
-            </select>
-            <button type="submit"><a>Valider</a></button>
-        </form>
-    </div>
-
     <div class="card_aqua">
         <div class="card2">
-            <h1>Editorial du mois</h1>
-            <h3>Reproduire le milieu naturel... tentant mais pas si facile !</h3>
+            <h1>Le témoignage du mois</h1>
+            <h3>Franck Rossignol - Comment se reproduise les scalaires</h3>
             <p>L'aquariophilie consiste à reproduire et maintenir en captivité des animaux aquatiques
             en mettant en valeur l'aspect esthétique des animaux et du décor, ce qui la différencie
             de l'aquaculture dont le but est la production agro-alimentaire. L'aquarium est alors utilisé
@@ -57,7 +44,6 @@ $categories = $bdd->query($requete); // Réalisation de la requête
             qui remplace les photos, les tableaux ou la télévision.
             L'aquariophilie est aussi une pratique naturaliste exploitant l'aquarium comme outil
             d'observation et de pédagogie écologiques.</p>
-            <a href="categorie.php?categorie=Editorial">Retrouvez ici tous nos éditoriaux</a>
         </div>
     </div>
 </body>
