@@ -26,7 +26,7 @@ if (isset($_GET['categorie'])) {
 
     <link rel="icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles de la catégorie <?= ($categorie) ?></title>
+    <title>Aquarium amazonien : <?= ($categorie) ?></title>
 </head>
 <body>
     <div class="header">

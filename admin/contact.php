@@ -1,3 +1,43 @@
+<?php
+ 
+// Paramètres de connexion
+$serveur = "localhost";
+$utilisateur = "root";
+$mot_de_passe = "";
+$base_de_donnees = "aquarium";
+ 
+// Établir la connexion
+ $connexion = mysqli_connect($serveur, $utilisateur,
+$mot_de_passe, $base_de_donnees);
+
+// Vérifier la connexion
+if (!$connexion) {
+    die("Échec de la connexion : " . mysqli_connect_error());
+} else {
+    echo "Connexion réussie à la base de données.";
+}
+ 
+ 
+// Vérification si le formulaire est soumis
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+ 
+// Récupération des données du formulaire
+    $nom = $_POST['nom'];
+    $prenom = $_POST['prenom'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+   
+// Requête d'insertion des données
+    $sql = "INSERT INTO contacts (nom, prenom, email, message)
+    VALUES ('$nom', '$prenom', '$email', '$message')";
+ 
+// Exécution de la requête d'insertion
+    mysqli_query($connexion,$sql);
+}
+ 
+// Fermer la connexion
+?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,7 +52,7 @@
     <link rel="icon" href="favicon.ico">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon aquarium</title>     
+    <title>Aquarium amazonien</title>     
 </head>
     
     <body>
@@ -40,8 +80,8 @@
                     <label for="nom"><a>Nom</a></label>
                     <input class="formulaire" type="text" id="nom" name="nom" required>
                     
-                    <label for="societe"><a>Prénom</a></label>
-                    <input class="formulaire" type="text" id="societe" name="societe">
+                    <label for="prenom"><a>Prénom</a></label>
+                    <input class="formulaire" type="text" id="prenom" name="prenom">
                     
                     <label for="email"><a>Email</a></label>
                     <input class="formulaire" type="email" id="email" name="email" required><br><br>

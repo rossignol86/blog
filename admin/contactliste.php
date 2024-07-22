@@ -2,7 +2,7 @@
 
 require_once "../bdd/bdd.php";
 
-$requete='SELECT * FROM articles'; // écriture de la requête
+$requete='SELECT * FROM contacts'; // écriture de la requête
 $reponses=$bdd->query($requete); // réalisation de la requête
 
 ?>
@@ -22,7 +22,7 @@ $reponses=$bdd->query($requete); // réalisation de la requête
             <li><a href="../index.php">Accueil</a></li>
             <!-- <li><a href="admin.php">Page Administration</a></li> -->
             <li><a href="inserer.php">Inserer nouvel article</a></li>
-            <li><a href="listecontact.php">Liste des contacts</a></li>
+            <li><a href="contactliste.php">Liste des contacts</a></li>
         </ul>
     </nav>
 
@@ -30,16 +30,13 @@ $reponses=$bdd->query($requete); // réalisation de la requête
 
     <?php foreach ($reponses as $reponse): ?>
         <section>
-            <h3><?= $reponse['categories'] ?></h2>
-            <h2><?= $reponse['titre'] ?></h2>
-            <p><?= $reponse['texte'] ?></p>
+            <h3><?= $reponse['prenom'] ?> <?= $reponse['nom'] ?></h2>
+            <p><?= $reponse['email'] ?></h2>
+            <p><?= $reponse['message'] ?></p>
         </section>
         <div>
-        <a href="traitementdelete.php?id=<?=$reponse['id'] ?>"> Suprimer </a>
-        <a href="modifier.php?id=<?=$reponse['id'] ?>"> modifier </a>
-        </div>
+        <a href="contactdelete.php?id=<?=$reponse['id'] ?>"> Suprimer </a>
         <hr>
-
     <?php endforeach; ?>
 
 </body>
