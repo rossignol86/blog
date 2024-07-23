@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
    
 // Requête d'insertion des données
-    $sql = "INSERT INTO contacts (nom, prenom, email, message)
+    $sql = "INSERT INTO temoignages (nom, prenom, email, message)
     VALUES ('$nom', '$prenom', '$email', '$message')";
  
 // Exécution de la requête d'insertion
@@ -62,10 +62,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="boutons">
                 <button class="bouton"><a href="../index.php">Accueil</a></button>
-                <button class="bouton"><a href="temoignages.php">Vos témoignages</a></button>
                 <div class="boutonfixe">
-                    <button class="bouton2"><a>Contactez-moi</a></button>
+                    <button class="bouton2"><a>Vos témoignages</a></button>
                 </div>
+                <button class="bouton"><a href="contact.php">Contactez-moi</a></button>
                 <button class="bouton"><a href="adminblog.php">Admin</a></button>
             </div>
         </div>
@@ -73,10 +73,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <container class="cards-container">
             <div class="card">
-                <h1>Contactez-moi</h1>
+                <h1>Votre témoignage</h1>
 
             <!-- Formulaire de renseignement -->
-                <form action="contact.php" method="post">
+                <form action="temoignages.php" method="post">
                     <label for="nom"><a>Nom</a></label>
                     <input class="formulaire" type="text" id="nom" name="nom" required>
                     
@@ -84,10 +84,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input class="formulaire" type="text" id="prenom" name="prenom">
                     
                     <label for="email"><a>Email</a></label>
-                    <input class="formulaire" type="email" id="email" name="email" required><br><br>
+                    <input class="formulaire" type="email" id="email" name="email" required>
                     
                     <label for="message"><a>Message</a></label>
-                    <textarea  class="formulaire" id="message" name="message" required></textarea><br><br>
+                    <textarea  class="formulaire" id="message" name="message" required></textarea>
                     
                     <input class="bouton-envoyer" type="submit" value="Envoyer">
                 </form>

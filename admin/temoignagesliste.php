@@ -2,7 +2,7 @@
 
 require_once "../bdd/bdd.php";
 
-$requete='SELECT * FROM articles'; // écriture de la requête
+$requete='SELECT * FROM temoignages'; // écriture de la requête
 $reponses=$bdd->query($requete); // réalisation de la requête
 
 ?>
@@ -20,27 +20,23 @@ $reponses=$bdd->query($requete); // réalisation de la requête
     <nav>                    
         <ul>
             <li><a href="../index.php">Accueil</a></li>
-            <li><a href="temoignagesliste.php">Liste des témoignages</a></li>
+            <li><a href="adminblog.php">Administration</a></li>
             <li><a href="inserer.php">Inserer nouvel article</a></li>
             <li><a href="contactliste.php">Liste des contacts</a></li>
-            
+            <li><a href="temoignagesliste.php">Liste des témoignages</a></li>
         </ul>
     </nav>
 
     <hr>
-
+    <h2>Liste des témoignages</h2>
+    <hr>
     <?php foreach ($reponses as $reponse): ?>
         <section>
-            <h3><?= $reponse['categories'] ?></h2>
-            <h2><?= $reponse['titre'] ?></h2>
-            <p><?= $reponse['texte'] ?></p>
+            <h3><?= $reponse['prenom'] ?> <?= $reponse['nom'] ?></h2>
+            <p><?= $reponse['email'] ?></h2>
+            <p><?= $reponse['message'] ?></p>
         </section>
-        <div>
-        <a href="traitementdelete.php?id=<?=$reponse['id'] ?>"> Suprimer </a>
-        <a href="modifier.php?id=<?=$reponse['id'] ?>"> modifier </a>
-        </div>
         <hr>
-
     <?php endforeach; ?>
 
 </body>

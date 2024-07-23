@@ -33,14 +33,12 @@ if (isset($_GET['categorie'])) {
         <h1>Articles de la catégorie : <strong><?= ($categorie) ?></strong></h1>
         <div class="boutons">
             <button class="bouton"><a href="index.php">Accueil</a></button>
-                <button class="bouton"><a href="temoignages.php">Vos témoignages</a></button>
-                <button class="bouton"><a href="admin/contact.php">Contactez-moi</a></button>
+            <button class="bouton"><a href="admin/temoignages.php">Vos témoignages</a></button>
+            <button class="bouton"><a href="admin/contact.php">Contactez-moi</a></button>
         </div>
     </div>
 
     <div class="cards-container">
-
-
         <?php foreach ($articles as $article): ?>
             <div class="card">
                 <h2><?= ($article['titre']) ?></h2>
@@ -53,5 +51,6 @@ if (isset($_GET['categorie'])) {
             </div>
         <?php endforeach; ?>
     </div>
+    
 </body>
 </html>

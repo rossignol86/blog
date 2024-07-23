@@ -11,8 +11,6 @@ if (isset($_GET['id'])) {
     $article = $requete_article->fetch();
 }
 
- // rediriger si pas d'id
-
 ?>
 
 
@@ -27,10 +25,11 @@ if (isset($_GET['id'])) {
     <h1>Page modification de l'article</h1>
     <nav>                    
         <ul>
-            <li><a href="../index.php">Accueil</a></li>
-            <li><a href="adminblog.php">Page Administration</a></li>
-            <li><a href="inserer.php">Page Inserer nouvel article</a></li>
-            <!-- <li><a href="modifier.php">Modifier article</a></li> -->
+        <li><a href="../index.php">Accueil</a></li>
+            <li><a href="adminblog.php">Administration</a></li>
+            <li><a href="inserer.php">Inserer nouvel article</a></li>
+            <li><a href="contactliste.php">Liste des contacts</a></li>
+            <li><a href="temoignagesliste.php">Liste des témoignages</a></li>
         </ul>
     </nav>
 
