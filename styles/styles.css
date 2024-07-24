@@ -10,9 +10,9 @@ body {
 }
 
 h2 {
-    /* font-size: 100px;
-    font-weight: 500; */
-    color: #000000;
+    font-size: 30px;
+    font-weight: 500;
+    color: #ffffff;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -85,7 +85,29 @@ a {
     background-color: #225024;; /* Couleur de fond au survol */
 }
 
-
+/* bouton fixe */
+.boutonfixe {
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    cursor: pointer; /* Curseur de pointeur */
+}
+.bouton2 {
+    background-color: #225024; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Pas de soulignement */
+    display: inline-block; /* Affichage en ligne */
+    font-size: 16px; /* Taille de la police */
+    margin: 4px 2px; /* Marges */
+    cursor: pointer; /* Curseur de pointeur */
+    border-radius: 4px; /* Coins arrondis */
+}
+.bouton2 a {
+    color: white; /* Couleur du texte du lien */
+    text-decoration: none; /* Pas de soulignement */
+}
 
 
 
@@ -138,4 +160,35 @@ a {
 
 .bouton-details:hover {
     background-color: #45a049;
+}
+
+.form-container {
+    justify-content: center;
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+}
+.form-container form {
+    width: 400px;
+    justify-content: center;
+    display: inline-block;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-container select, .form-container button {
+    width: 75%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.select_categorie{
+    font-size: 24px;
+    font-weight: 600;
+    background: #4CAF50;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
 }

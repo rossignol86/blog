@@ -53,6 +53,7 @@ $article = $stmt->fetch(PDO::FETCH_ASSOC);
         <h1>Aquarium d'eau douce d'Amazonie</h1>
         <div class="boutons">
             <button class="bouton"><a href="index.php">Accueil</a></button>
+            <button class="bouton"><a href="articles.php">Articles</a></button>
             <button class="bouton"><a href="admin/temoignages.php">Vos témoignages</a></button>
             <button class="bouton"><a href="admin/contact.php">Contactez-moi</a></button>
             <button class="bouton"><a href="categorie.php?categorie=<?= $article['categories'] ?>">Catégorie</a></button>

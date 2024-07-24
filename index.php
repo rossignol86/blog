@@ -1,14 +1,6 @@
-<?php
-require_once "bdd/bdd.php";
-
-$requete = 'SELECT DISTINCT categories FROM articles'; // Requête pour récupérer les catégories distinctes
-$categories = $bdd->query($requete); // Réalisation de la requête
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
-    
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles/styleindex.css">
@@ -31,23 +23,11 @@ $categories = $bdd->query($requete); // Réalisation de la requête
             <div class="boutonfixe">
             <button class="bouton2"><a>Accueil</a></button>
             </div>
+            <button class="bouton"><a href="articles.php">Articles</a></button>
             <button class="bouton"><a href="admin/temoignages.php">Vos témoignages</a></button>
             <button class="bouton"><a href="admin/contact.php">Contactez-moi</a></button>
             <button class="bouton"><a href="admin/adminblog.php">Admin</a></button>
         </div>
-    </div>
-
-    <div class="form-container">
-        <form method="get" action="categorie.php">
-            <h2>Découvrez tous nos produits, articles et informations.</h2>
-            <select class="select_categorie" name="categorie">
-                <?php foreach ($categories as $categorie): ?>
-                    <option value="<?= $categorie['categories'] ?>">
-                        <?= $categorie['categories'] ?></option>
-                <?php endforeach; ?>
-            </select>
-            <button type="submit"><a>Valider</a></button>
-        </form>
     </div>
 
     <div class="card_aqua">
@@ -68,6 +48,8 @@ $categories = $bdd->query($requete); // Réalisation de la requête
             </div>
         </div>
     </div>
+
+
 
 </body>
 </html>
