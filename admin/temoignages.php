@@ -1,24 +1,11 @@
 <?php
-// Paramètres de connexion
-$host = 'localhost';
-$dbname = 'aquarium';
-$user = 'root';
-$password = '';
-$options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
-try {
-    // Connexion à la base de données
-    $bdd = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password, $options);
-    
-    // Préparation et exécution de la requête
-    $stmt = $bdd->query("SELECT * FROM temoignages");
-    
-    // Extraction des résultats
-    $temoignages = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    echo 'Erreur de connexion : ' . $e->getMessage();
-    exit();
-}
+require_once "../bdd/bdd.php";
+
+$requete = $bdd->prepare('SELECT * FROM temoignages');
+$requete->execute([]); // Exécution de la requête
+$temoignages = $requete->fetchAll(); // Récupération des résultats
+
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +27,7 @@ try {
         <h1>Réaliser un aquarium amazonien</h1>
         <div class="boutons">
             <button class="bouton"><a href="../index.php">Accueil</a></button>
+            <button class="bouton"><a href="../articles.php">Articles</a></button>
             <div class="boutonfixe">
                 <button class="bouton2"><a>Vos témoignages</a></button>
             </div>

@@ -142,38 +142,6 @@ a {
 }
 
 
-/* presentation aquariophilie */
-.card_aqua {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 60%;
-
-}
-.card2 {
-    background-color: rgba(255, 255, 255, 0.741);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    overflow: hidden;
-    padding: 10px;
-    margin: 20px;
-}
-.card2 h3 {
-    margin: 0;
-    padding: 10px;
-    background: #972606;
-    color: white;
-    font-size: 30px;
-}
-.card2 p {
-    padding: 10px;
-    font-size: 24px;
-    font-weight: 600;
-    text-align: justify;
-}
-
 /* boutons actifs */
 .boutons {
     display: flex;
@@ -288,4 +256,80 @@ a {
 }
 .temoins:active {
     background-color: #225024; /* Couleur de fond au survol */
+}
+
+
+/* presentation aquariophilie */
+.card_aqua {
+    margin: 0 auto;
+    width: 80%;
+}
+.card2 {
+    background-color: rgba(255, 255, 255, 0.741);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}
+.card2 h3 {
+    margin: 0;
+    padding: 10px;
+    background: #972606;
+    color: white;
+    font-size: 30px;
+}
+.card2 p {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+
+/* selections du mois */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.card {
+    width: 250px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+.card h2 {
+    color: #46a517;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.card-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.bouton-details {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.bouton-details a {
+    color: white;
+    text-decoration: none;
+}
+.bouton-details:hover {
+    background-color: #45a049;
 }

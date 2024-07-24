@@ -1,3 +1,12 @@
+<?php
+require_once "bdd/bdd.php";
+
+// Modifie la requête pour récupérer les 3 premiers articles de la catégorie "poisson"
+$requete='SELECT * FROM articles WHERE categories = "poissons" LIMIT 3'; 
+$articles=$bdd->query($requete); // réalisation de la requête
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -41,13 +50,32 @@
             qui remplace les photos, les tableaux ou la télévision.
             L'aquariophilie est aussi une pratique naturaliste exploitant l'aquarium comme outil
             d'observation et de pédagogie écologiques.</p>
-            <div class="boutonstemoins">
-                <button  class="temoins">
-                <a href="categorie.php?categorie=Editorial">Retrouvez ici tous nos éditoriaux</a>
-                </button>
-            </div>
         </div>
     </div>
+
+    <section class="card_aqua">
+        <div  class="card2">
+            <div>
+                <h1>Ma sélection du mois</h1>
+            </div>    
+            <div class="cards-container">           
+                <div>
+                    <?php foreach ($articles as $article): ?>
+                        <div class="card">
+                            <h2><?= ($article['categories']) ?></h2>
+                            <h2><?= ($article['titre']) ?></h2>
+                            <div class="card-image">
+                                <img src="<?=($article['photo']) ?>" alt="Project Image">
+                            </div>
+                            <button class="bouton-details">
+                                <a href="article.php?id=<?= $article['id'] ?>">En savoir +</a>
+                            </button>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>     
+    </section>
 
 
 

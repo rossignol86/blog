@@ -38,7 +38,7 @@ if (isset($_GET['categorie']) && $_GET['categorie'] !== "Animalerie") {
 </head>
 <body>
     <div class="header">
-        <h1>Articles de la catégorie : <strong><?= ($categorie) ?></strong></h1>
+        <h1>Articles de la labrairie <strong><?= ($categorie) ?></strong></h1>
         <div class="boutons">
             <button class="bouton"><a href="index.php">Accueil</a></button>
                 <div class="boutonfixe">
@@ -51,9 +51,10 @@ if (isset($_GET['categorie']) && $_GET['categorie'] !== "Animalerie") {
 
     <div class="form-container">
         <form method="get" action="articles.php">
-            <h2>Découvrez tous nos produits, articles et informations.</h2>
+            <h2>Découvrez dans notre librairie participative tous nos produits,
+                articles et matériels.</h2>
             <select class="select_categorie" name="categorie">
-                <option value="Animalerie">Animalerie</option>
+                <option value="Librairie">Librairie</option>
                 <?php foreach ($categories as $categorie): ?>
                     <option value="<?= $categorie['categories'] ?>">
                         <?= $categorie['categories'] ?>
@@ -67,6 +68,7 @@ if (isset($_GET['categorie']) && $_GET['categorie'] !== "Animalerie") {
     <div class="cards-container">
         <?php foreach ($articles as $article): ?>
             <div class="card">
+                <h1><?= ($article['categories']) ?></h1>
                 <h2><?= ($article['titre']) ?></h2>
                 <div class="card-image">
                     <img src="<?=($article['photo']) ?>" alt="Project Image">

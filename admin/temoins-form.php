@@ -9,13 +9,6 @@ $base_de_donnees = "aquarium";
 // Établir la connexion
  $connexion = mysqli_connect($serveur, $utilisateur,
 $mot_de_passe, $base_de_donnees);
-
-// Vérifier la connexion
-// if (!$connexion) {
-//     die("Échec de la connexion : " . mysqli_connect_error());
-// } else {
-//     echo "Connexion réussie à la base de données.";
-// }
  
  
 // Vérification si le formulaire est soumis
@@ -78,16 +71,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- Formulaire de renseignement -->
                 <form action="temoignages.php" method="post">
                     <label for="nom"><a>Nom</a></label>
-                    <input class="formulaire" type="text" id="nom" name="nom" required>
+                    <input class="formulaire" type="text" id="nom" name="nom">
                     
                     <label for="prenom"><a>Prénom</a></label>
                     <input class="formulaire" type="text" id="prenom" name="prenom">
                     
                     <label for="email"><a>Email</a></label>
-                    <input class="formulaire" type="email" id="email" name="email" required>
+                    <input class="formulaire" type="email" id="email" name="email">
                     
                     <label for="message"><a>Message</a></label>
-                    <textarea  class="formulaire" id="message" name="message" required></textarea>
+                    <textarea  class="formulaire" id="message" name="message"></textarea>
                     
                     <input class="bouton-envoyer" type="submit" value="Envoyer">
                 </form>
