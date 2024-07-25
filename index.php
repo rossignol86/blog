@@ -2,7 +2,7 @@
 require_once "bdd/bdd.php";
 
 // Modifie la requête pour récupérer les 3 premiers articles de la catégorie "poisson"
-$requete='SELECT * FROM articles WHERE categories = "poissons" LIMIT 3'; 
+$requete='SELECT * FROM articles WHERE categories = "poissons" LIMIT 2'; 
 $articles=$bdd->query($requete); // réalisation de la requête
 
 ?>
@@ -53,29 +53,23 @@ $articles=$bdd->query($requete); // réalisation de la requête
         </div>
     </div>
 
-    <section class="card_aqua">
-        <div  class="card2">
-            <div>
-                <h1>Ma sélection du mois</h1>
-            </div>    
-            <div class="cards-container">           
-                <div>
-                    <?php foreach ($articles as $article): ?>
-                        <div class="card">
-                            <h2><?= ($article['categories']) ?></h2>
-                            <h2><?= ($article['titre']) ?></h2>
-                            <div class="card-image">
-                                <img src="<?=($article['photo']) ?>" alt="Project Image">
-                            </div>
-                            <button class="bouton-details">
-                                <a href="article.php?id=<?= $article['id'] ?>">En savoir +</a>
-                            </button>
-                        </div>
-                    <?php endforeach; ?>
+                  
+    <div class="cards-container">
+        <?php foreach ($articles as $article): ?>
+            <div class="card">
+                <h1><?= ($article['categories']) ?></h1>
+                <h2><?= ($article['titre']) ?></h2>
+                <div class="card-image">
+                    <img src="<?=($article['photo']) ?>" alt="Project Image">
                 </div>
+                <button class="bouton-details">
+                    <a href="article.php?id=<?= $article['id'] ?>">En savoir +</a>
+                </button>
             </div>
-        </div>     
-    </section>
+        <?php endforeach; ?>
+    </div>
+        
+
 
 
 
